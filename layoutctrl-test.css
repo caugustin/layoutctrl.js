@@ -1,0 +1,70 @@
+/* test-browser.css -- layoutctrl, copal-css.net, 2013-07-12 */
+
+/* Operation ... */
+
+.has-js, .has-no-js,
+.has-show-layout,
+.has-hide-annotations,
+.has-show-annotations         { color: #CCC; }
+.no-js .has-no-js             { color: red; }
+.js .has-js,
+.show-layout .has-show-layout,
+.hide-annotations .has-hide-annotations,
+.show-annotations .has-show-annotations { color: green; }
+
+
+/* OS ... */
+
+.has-mac, .has-win, .has-linux,
+.has-ios, .has-android   { color: #CCC; }
+
+.is-mac     .has-mac,
+.is-win     .has-win,
+.is-linux   .has-linux,
+.is-ios     .has-ios,
+.is-android .has-android { color: green; }
+
+
+/* Browser ... */
+
+.has-ie, .has-gecko, .has-webkit, .has-blink, .has-opera,
+.has-khtml, .has-unknown { color: #CCC; }
+
+.is-ie .has-ie, .is-gecko .has-gecko,
+.is-webkit .has-webkit, .is-opera .has-opera,
+.is-khtml .has-khtml, .is-unknown .has-unknown { color: green; }
+
+.hasCairoGecko, .hasNotCairoGecko,
+.hasMacCairoGecko, .hasMacNotCairoGecko { color: #CCC; }
+
+.hasGecko ul { display: none; }
+.isGecko .hasGecko ul { display: block; }
+
+.isCairoGecko .hasCairoGecko, .isNotCairoGecko .hasNotCairoGecko,
+.isMacCairoGecko .hasMacCairoGecko, .isMacNotCairoGecko .hasMacNotCairoGecko { color: green; }
+
+.only-ie { display: none; }
+.is-ie .only-ie { display: block; }
+.hasTrident5, .hasTrident7, .hasTrident8, .hasTrident9 { color: #CCC; }
+.isTrident5 .hasTrident5, .isTrident7 .hasTrident7,
+.isTrident8 .hasTrident8, .isTrident9 .hasTrident9 { color: green; }
+
+
+/* Features ... */
+
+.has-jsprint, .has-no-jsprint,
+.has-opacity, .has-no-opacity,
+.has-boxshadow, .has-no-boxshadow,
+.has-contentposition, .has-no-contentposition { color: #CCC; }
+
+.no-jsprint .has-no-jsprint,
+.no-opacity .had-no-opacity,
+.no-boxshadow .has-no-boxshadow,
+.no-contentposition .has-no-contentposition   { color: red; }
+
+.jsprint .has-jsprint,
+.opacity .has-opacity,
+.boxshadow .has-boxshadow,
+.contentposition .has-contentposition         { color: green; }
+
+

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta charset="utf-8" />
+	
+	<title>LayoutCtrl Test | copal-css.net</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="imagetoolbar" content="no" />
+
+	<meta name="viewport" content="initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="../layoutctrl.css" />
+	<link rel="stylesheet" type="text/css" href="../layoutctrl-test.css" />
+	
+	<script type="text/javascript" src="config-test.js"></script>
+	<script type="text/javascript" src="../layoutctrl.js"></script>
+
+	<style type="text/css">
+		pre { /* http://html5reset.org/ */
+			white-space: pre;      /* CSS2 */
+			white-space: pre-wrap; /* CSS 2.1 */
+			white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+			word-wrap: break-word; /* IE */
+		}
+		@media screen { pre { overflow: auto; } }
+		.cols { display: table; }
+		.col  {
+			display: table-cell;
+			width: 50%;
+			padding-right: 2em;
+		}
+		@media screen and (max-width: 480px) and (orientation: portrait) {
+			.cols { display: block; }
+			.col {
+				display: block;
+				width: auto;
+				padding-right: 0;
+			}
+		}
+	</style>
+	
+</head>
+<body class="testpage">
+
+<h3>LayoutCtrl Test</h3>
+
+<div class="cols">
+<div class="col">
+
+<h4>Browser Infos</h4>
+<pre><script type="text/javascript" language="Javascript">
+	document.writeln('navigator.appName: ', navigator.appName);
+	document.writeln('navigator.appVersion: ', navigator.appVersion);
+	document.writeln('navigator.userAgent: ', navigator.userAgent);
+	if (navigator.language) document.writeln('navigator.language: ', navigator.language);
+	if (navigator.systemLanguage) document.writeln('navigator.systemLanguage: ', navigator.systemLanguage);
+	if (navigator.userLanguage) document.writeln('navigator.userLanguage: ', navigator.userLanguage);
+	document.writeln('document.location.href: ', document.location.href);
+	if (document.URL) document.writeln('document.URL: ', document.URL);
+	if (document.links[0]) document.writeln('document.links[0].href: ', document.links[0].href);
+	if (document.domain) document.writeln('document.domain: ', document.domain);
+</script></pre>
+
+<h4>Operation</h4>
+<ul>
+	<li class="has-no-js">no-js</li>
+	<li class="has-js">js</li>
+	<li class="has-show-layout">show-layout</li>
+	<li class="has-hide-annotations">hide-annotations</li>
+	<li class="has-show-annotations">show-annotations</li> 
+</ul>
+
+<h4>OS</h4>
+<ul>
+	<li class="has-mac">is-mac</li>
+	<li class="has-win">is-win</li>
+	<li class="has-linux">is-linux</li>
+	<li class="has-ios">is-ios</li>
+	<li class="has-android">is-android</li>
+</ul>
+
+<h4>Browser</h4>
+
+<ul>
+	<li class="has-ie">is-ie</li>
+	<li class="has-gecko">is-gecko</li>
+	<li class="has-webkit">is-webkit</li>
+	<li class="has-blink">is-blink</li>
+	<li class="has-opera">is-opera</li>
+	<li class="has-khtml">is-khtml</li>
+	<li class="has-unknown">is-unknown</li>
+</ul>
+
+<ul class="only-ie">
+	<li class="hasTrident5">isTrident5</li>
+	<li class="hasTrident7">isTrident7</li>
+	<li class="hasTrident8">isTrident8</li>
+	<li class="hasTrident9">isTrident9</li>
+</ul>
+
+
+<h4>Features</h4>
+<ul>
+	<li class="has-no-jsprint">no-jsprint</li>
+	<li class="has-jsprint">jsprint</li>
+	<li class="has-no-opacity">no-opacity</li>
+	<li class="has-opacity">opacity</li>
+	<li class="has-no-boxshadow">no-boxshadow</li>
+	<li class="has-boxshadow">boxshadow</li>
+	<li class="has-no-contentposition">no-contentposition</li>
+	<li class="has-contentposition">contentposition</li>
+</ul>
+
+
+</div><!-- /col -->
+<div class="col">
+
+<h4>Show/Hide Annotations Modifications</h4>
+
+<p>
+	<mark title="This is a mark:">Lorem ipsum dolor sit amet</mark>, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim<del title="This is a del:" datetime="2008-06-05T21:07:40+02:00"> ad minim veniam</del>, quis nostrud exerci tation ullamcorper suscipit <span class="dim" title="Class dim:">lobortis nisl ut</span> aliquip ex ea commodo consequat. <ins title="This is an ins:" datetime="2008-06-05T21:07:46+02:00">Duis autem vel eum</ins> iriure dolor, vel illum dolore eu feugiat nulla facilisis.
+</p>
+
+<del title="Following a block del:" datetime="2008-06-05T21:08:43+02:00">
+<p>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut <span class="annot" title="A span annot:">laoreet dolore magna aliquam</span> erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+</p>
+</del>
+
+<ins title="A block ins:" datetime="2008-06-05T21:09:04+02:00">
+<p>
+	<mark title="A mark:">Lorem ipsum dolor sit amet</mark>, consectetuer adipiscing elit. Ut wisi enim <del title="A del:" datetime="2008-06-05T21:07:40+02:00">ad minim veniam</del>, quis nostrud exerci tation ullamcorper ut aliquip ex ea commodo consequat. <ins datetime="2008-06-05T21:07:46+02:00">Duis autem vel eum</ins> iriure dolor in hendrerit in vulputate velit esse molestie consequat.
+</p>
+</ins>
+
+<div class="annot" title="A block annot:">
+	<p>
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt:
+	</p>
+	<ul>
+		<li>Ut wisi enim ad minim veniam</li>
+		<li>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat</li>
+	</ul>
+</div><!-- /annot -->
+
+
+<h4>Extended Show Annotations <span class="placeholder">Modifications</span></h4>
+
+<p>Lorem ipsum dolor sit amet, <abbr title="for example" lang="en">e.g.</abbr> consectetuer adipiscing elit, sed <a class="placeholder">diam nonummy</a> nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <a href="#test">Ut wisi enim</a> ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis <a class="download" href="#test">ex ea commodo</a> consequat.
+</p>
+
+<blockquote>
+
+<p class="dummy">Lorem ipsum dolor sit amet, <abbr title="for example" lang="en">e.g.</abbr> consectetuer adipiscing elit, sed <a class="placeholder">diam nonummy</a> nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <a href="#test">Ut wisi enim</a> ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis <a class="download" href="#test">ex ea commodo</a> consequat.
+</p>
+
+</blockquote>
+</div><!-- /col -->
+</div><!-- /cols -->
+
+</body>
+</html>
